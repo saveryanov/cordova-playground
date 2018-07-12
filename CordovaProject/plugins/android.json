@@ -9,6 +9,12 @@
   "installed_plugins": {
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "io.cordova.hellocordova"
+    },
+    "cordova-plugin-battery-status": {
+      "PACKAGE_NAME": "io.cordova.cordovaplayground"
+    },
+    "cordova-plugin-console": {
+      "PACKAGE_NAME": "io.cordova.cordovaplayground"
     }
   },
   "dependent_plugins": {}

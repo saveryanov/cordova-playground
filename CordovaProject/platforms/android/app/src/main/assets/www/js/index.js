@@ -28,43 +28,42 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function () {
         this.receivedEvent('deviceready');
-
-
-        document.getElementById("setLocalStorage").addEventListener("click", setLocalStorage);
-        document.getElementById("showLocalStorage").addEventListener("click", showLocalStorage);
-        document.getElementById("removeProjectFromLocalStorage").addEventListener("click", removeProjectFromLocalStorage);
-        document.getElementById("getLocalStorageByKey").addEventListener("click", getLocalStorageByKey);
-        document.getElementById("setLocalStorageByInput").addEventListener("click", setLocalStorageByInput);
         var localStorage = window.localStorage;
 
-        function setLocalStorage() {
+        document.getElementById("setLocalStorage").addEventListener("click", function() {
             localStorage.setItem("Name", "John");
             localStorage.setItem("Job", "Developer");
             localStorage.setItem("Project", "Cordova Project");
-        }
-
-        function showLocalStorage() {
+        });
+        document.getElementById("showLocalStorage").addEventListener("click", function() {
             console.log(localStorage.getItem("Name"));
             console.log(localStorage.getItem("Job"));
             console.log(localStorage.getItem("Project"));
-        }
-
-        function removeProjectFromLocalStorage() {
+        });
+        document.getElementById("removeProjectFromLocalStorage").addEventListener("click", function() {
             localStorage.removeItem("Project");
-        }
-
-        function getLocalStorageByKey() {
+        });
+        document.getElementById("getLocalStorageByKey").addEventListener("click", function() {
             console.log(localStorage.key(0));
-        }
-
-        function setLocalStorageByInput() {
+        });
+        document.getElementById("setLocalStorageByInput").addEventListener("click", function() {
             localStorage.setItem(document.getElementById("localStorageKey").value, document.getElementById("localStorageValue").value);
             console.log(JSON.stringify(localStorage, null, 4));
-        }
+        });
 
         document.addEventListener("volumeupbutton", function() { alert('Volume Up Button is pressed'); }, false);
         document.addEventListener("volumedownbutton", function() { alert('Volume Down Button is pressed'); }, false);
         document.addEventListener("backbutton", function() { alert('Back Button is pressed'); }, false);
+
+        window.addEventListener("batterystatus", function onBatteryStatus(info) { 
+            console.log("BATTERY STATUS:  Level: " + info.level + " isPlugged: " + info.isPlugged); 
+        }, false);
+        window.addEventListener("batterycritical", function onBatteryStatus(info) { 
+            console.log("BATTERY STATUS (critical):  Level: " + info.level + " isPlugged: " + info.isPlugged); 
+        }, false);  
+        window.addEventListener("batterylow", function onBatteryStatus(info) { 
+            console.log("BATTERY STATUS (low):  Level: " + info.level + " isPlugged: " + info.isPlugged); 
+        }, false);  
     },
 
     // Update DOM on a Received Event

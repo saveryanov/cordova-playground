@@ -1,4 +1,4 @@
-#Thu Jul 12 17:35:20 MSK 2018
+#Thu Jul 12 17:57:49 MSK 2018
 base.0=/Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
 renamed.0=classes.dex
 file.0=/Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex

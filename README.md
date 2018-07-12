@@ -38,4 +38,20 @@ Read more at: https://www.tutorialspoint.com/cordova/cordova_config_xml.htm
 
 If you using emulator you can output some data to console by simple console.log() method. For seing your logged messages from app just open Google Chrome and go to: ```chrome://inspect```.
 
+Also you can use **logcat** output from the terminal: ```adb logcat | grep -i "console"```
+
 There you can find your emulated device, then click **inpect**. You can find app output at the **console** tab.
+
+## Plugin manager ##
+
+Cordova Plugman is a useful command line tool for installing and managing plugins. You should use **plugman** if your app needs to run on one specific platform. If you want to create a cross-platform app you should use **cordova-cli** which will modify plugins for different platforms.
+
+To install plugman just run this command: ```npm install -g plugman```
+
+To install plugins via plugman: ```plugman install --platform android --project platforms\android --plugin cordova-plugin-camera```
+To uninstall plugins via plugman: ```plugman uninstall --platform android --project platforms\android  --plugin cordova-plugin-camera```
+
+To install plugins via Cordova CLI: ```cordova plugin add cordova-plugin-battery-status``` (battery plugin)
+To uninstall plugins via Cordova CLI: ```cordova plugin remove cordova-plugin-battery-status``` (battery plugin)
+
+Read more at: https://www.tutorialspoint.com/cordova/cordova_plugman.htm
