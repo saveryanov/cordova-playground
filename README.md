@@ -1,6 +1,6 @@
 # cordova-playground #
 
-Repository for experiments and learning cordova by tutorials at https://www.tutorialspoint.com/cordova. I'll run this tutorials by creating android app.
+Repository for experiments and learning cordova by tutorials at https://www.tutorialspoint.com/cordova. I will go through these tutorials when creating an application for android.
 
 ## Install ##
 
