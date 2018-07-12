@@ -8,6 +8,8 @@ Repository for experiments and learning cordova by tutorials at https://www.tuto
 2. Install cordova by npm: ```npm install -g cordova```
 3. Install Android SDK or XCode (for iOS).
 
+If you want to use emulator then you should create virtual device by AVD Manager.
+
 Read more at: https://www.tutorialspoint.com/cordova/cordova_environment_setup.htm
 
 ## New project ##
@@ -32,3 +34,8 @@ The **config.xml** file is the place where we can change the configuration of th
 
 Read more at: https://www.tutorialspoint.com/cordova/cordova_config_xml.htm
 
+## console.log ##
+
+If you using emulator you can output some data to console by simple console.log() method. For seing your logged messages from app just open Google Chrome and go to: ```chrome://inspect```.
+
+There you can find your emulated device, then click **inpect**. You can find app output at the **console** tab.
