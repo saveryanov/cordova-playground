@@ -25,3 +25,10 @@ Then add android platform: ```cordova platform add android```
 And build your app: ```cordova build android```
 
 Read more at: https://www.tutorialspoint.com/cordova/cordova_first_application.htm
+
+## Configure application ##
+
+The **config.xml** file is the place where we can change the configuration of the app.
+
+Read more at: https://www.tutorialspoint.com/cordova/cordova_config_xml.htm
+
