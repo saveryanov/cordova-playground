@@ -28,6 +28,43 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function () {
         this.receivedEvent('deviceready');
+
+
+        document.getElementById("setLocalStorage").addEventListener("click", setLocalStorage);
+        document.getElementById("showLocalStorage").addEventListener("click", showLocalStorage);
+        document.getElementById("removeProjectFromLocalStorage").addEventListener("click", removeProjectFromLocalStorage);
+        document.getElementById("getLocalStorageByKey").addEventListener("click", getLocalStorageByKey);
+        document.getElementById("setLocalStorageByInput").addEventListener("click", setLocalStorageByInput);
+        var localStorage = window.localStorage;
+
+        function setLocalStorage() {
+            localStorage.setItem("Name", "John");
+            localStorage.setItem("Job", "Developer");
+            localStorage.setItem("Project", "Cordova Project");
+        }
+
+        function showLocalStorage() {
+            console.log(localStorage.getItem("Name"));
+            console.log(localStorage.getItem("Job"));
+            console.log(localStorage.getItem("Project"));
+        }
+
+        function removeProjectFromLocalStorage() {
+            localStorage.removeItem("Project");
+        }
+
+        function getLocalStorageByKey() {
+            console.log(localStorage.key(0));
+        }
+
+        function setLocalStorageByInput() {
+            localStorage.setItem(document.getElementById("localStorageKey").value, document.getElementById("localStorageValue").value);
+            console.log(JSON.stringify(localStorage, null, 4));
+        }
+
+        document.addEventListener("volumeupbutton", function() { alert('Volume Up Button is pressed'); }, false);
+        document.addEventListener("volumedownbutton", function() { alert('Volume Down Button is pressed'); }, false);
+        document.addEventListener("backbutton", function() { alert('Back Button is pressed'); }, false);
     },
 
     // Update DOM on a Received Event
@@ -44,35 +81,3 @@ var app = {
 };
 
 app.initialize();
-
-document.getElementById("setLocalStorage").addEventListener("click", setLocalStorage);
-document.getElementById("showLocalStorage").addEventListener("click", showLocalStorage);
-document.getElementById("removeProjectFromLocalStorage").addEventListener("click", removeProjectFromLocalStorage);
-document.getElementById("getLocalStorageByKey").addEventListener("click", getLocalStorageByKey);
-document.getElementById("setLocalStorageByInput").addEventListener("click", setLocalStorageByInput);
-var localStorage = window.localStorage;
-
-function setLocalStorage() {
-    localStorage.setItem("Name", "John");
-    localStorage.setItem("Job", "Developer");
-    localStorage.setItem("Project", "Cordova Project");
-}
-
-function showLocalStorage() {
-    console.log(localStorage.getItem("Name"));
-    console.log(localStorage.getItem("Job"));
-    console.log(localStorage.getItem("Project"));
-}
-
-function removeProjectFromLocalStorage() {
-    localStorage.removeItem("Project");
-}
-
-function getLocalStorageByKey() {
-    console.log(localStorage.key(0));
-}
-
-function setLocalStorageByInput() {
-    localStorage.setItem(document.getElementById("localStorageKey").value, document.getElementById("localStorageValue").value);
-    console.log(JSON.stringify(localStorage, null, 4));
-}
