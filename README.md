@@ -51,9 +51,11 @@ Cordova Plugman is a useful command line tool for installing and managing plugin
 To install plugman just run this command: ```npm install -g plugman```
 
 To install plugins via plugman: ```plugman install --platform android --project platforms\android --plugin cordova-plugin-camera```
+
 To uninstall plugins via plugman: ```plugman uninstall --platform android --project platforms\android  --plugin cordova-plugin-camera```
 
 To install plugins via Cordova CLI: ```cordova plugin add cordova-plugin-battery-status``` (battery plugin)
+
 To uninstall plugins via Cordova CLI: ```cordova plugin remove cordova-plugin-battery-status``` (battery plugin)
 
 Read more at: https://www.tutorialspoint.com/cordova/cordova_plugman.htm
