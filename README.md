@@ -76,7 +76,7 @@ Read more at:  https://www.tutorialspoint.com/cordova/cordova_events.htm
 
 ### Local storage page ###
 
-Here the results of experiments with local storage values. I made simple form with two input fields for setting/removing values in local storage.
+Results of experiments with local storage values. At this page you can see a simple form with two input fields for setting/removing values in local storage by key.
 
 ![Local storage tab](https://github.com/saveryanov/cordova-playground/blob/master/screenshots/local-storage-tab.png?raw=true)
 
@@ -84,7 +84,7 @@ Read more at: https://www.tutorialspoint.com/cordova/cordova_storage.htm
 
 ### Battery page ###
 
-Here the results of tutorial about battery status plugin. At this page you can see information about battery level and charging status.
+Results of tutorial about battery status plugin. At this page you can see information about battery level and charging status.
 
 ![Battery tab](https://github.com/saveryanov/cordova-playground/blob/master/screenshots/battery-tab.png?raw=true)
 
@@ -92,8 +92,16 @@ Read more at: https://www.tutorialspoint.com/cordova/cordova_battery_status.htm
 
 ### Camera page ###
 
-Here the results of tutorial about camera plugin. At this page you can use camera for taking picture or load image from local file system.
+Results of tutorial about camera plugin. At this page you can use camera for taking picture or load image from local file system.
 
 ![Camera page](https://github.com/saveryanov/cordova-playground/blob/master/screenshots/camera-tab.png?raw=true)
 
 Read more at: https://www.tutorialspoint.com/cordova/cordova_camera.htm
+
+### Contacts page ###
+
+Results of tutorial about contacts plugin. At this page you can create, find and delete contacts.
+
+![Contacts page](https://github.com/saveryanov/cordova-playground/blob/master/screenshots/contacts-tab.png?raw=true)
+
+Read more at: https://www.tutorialspoint.com/cordova/cordova_contacts.htm

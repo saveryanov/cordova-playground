@@ -18,6 +18,9 @@
     },
     "cordova-plugin-camera": {
       "PACKAGE_NAME": "io.cordova.cordovaplayground"
+    },
+    "cordova-plugin-contacts": {
+      "PACKAGE_NAME": "io.cordova.cordovaplayground"
     }
   },
   "dependent_plugins": {}

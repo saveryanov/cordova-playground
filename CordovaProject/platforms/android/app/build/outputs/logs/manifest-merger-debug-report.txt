@@ -11,15 +11,15 @@ INJECTED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/and
 	android:name
 		ADDED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:12:127-180
 manifest
-ADDED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-18:12
-INJECTED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-18:12
-INJECTED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-18:12
-INJECTED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-18:12
+ADDED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-21:12
 MERGED from [com.android.support:support-v4:24.1.1] /Users/backend/.gradle/caches/transforms-1/files-1.1/support-v4-24.1.1.aar/5d36f7933dc54971a229a3f44b7671a3/AndroidManifest.xml:17:1-27:12
 MERGED from [:CordovaLib] /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/CordovaLib/build/intermediates/manifests/full/debug/AndroidManifest.xml:20:1-27:12
-INJECTED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-18:12
-INJECTED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-18:12
-INJECTED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-18:12
+INJECTED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-21:12
+INJECTED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-21:12
 	package
 		ADDED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:2:102-140
 		INJECTED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml
@@ -108,6 +108,18 @@ uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:17:5-81
 	android:name
 		ADDED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:17:22-78
+uses-permission#android.permission.READ_CONTACTS
+ADDED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:18:5-72
+	android:name
+		ADDED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:18:22-69
+uses-permission#android.permission.WRITE_CONTACTS
+ADDED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:19:5-73
+	android:name
+		ADDED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:19:22-70
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:20:5-71
+	android:name
+		ADDED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:20:22-68
 meta-data#android.support.FILE_PROVIDER_PATHS
 ADDED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:13:13-123
 	android:resource
