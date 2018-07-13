@@ -170,6 +170,37 @@
             $('#device-output').html('<pre>' + JSON.stringify(device, null, 4) + '</pre>');
 
 
+            // Accelerometer
+            $("#getAcceleration").click(function getAcceleration() {
+                navigator.accelerometer.getCurrentAcceleration(accelerometerSuccess, accelerometerError);
+
+                function accelerometerSuccess(acceleration) {
+                    $('#accelerometer-output').html('<pre>' + JSON.stringify(acceleration, null, 4) + '</pre>');
+                }
+
+                function accelerometerError() {
+                    alert('onError!');
+                }
+            });
+            var watchID;
+            $("#watchAcceleration").click(function watchAcceleration() {
+                var accelerometerOptions = {
+                    frequency: 1000
+                }
+                watchID = navigator.accelerometer.watchAcceleration(accelerometerSuccess, accelerometerError, accelerometerOptions);
+
+                function accelerometerSuccess(acceleration) {
+                    $('#accelerometer-output').html('<pre>' + JSON.stringify(acceleration, null, 4) + '</pre>');
+                }
+
+                function accelerometerError() {
+                    alert('onError!');
+                }
+            });
+            $("#stopWatchAcceleration").click(function stopWatchAcceleration() {
+                navigator.accelerometer.clearWatch(watchID);
+            });
+
         },
 
     };

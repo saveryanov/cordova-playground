@@ -86,13 +86,17 @@ Read more at: https://www.tutorialspoint.com/cordova/cordova_storage.htm
 
 Results of tutorial about battery status plugin. At this page you can see information about battery level and charging status.
 
+Plugin install command: ```cordova plugin add cordova-plugin-battery-status```
+
 ![Battery tab](https://github.com/saveryanov/cordova-playground/blob/master/screenshots/battery-tab.png?raw=true)
 
 Read more at: https://www.tutorialspoint.com/cordova/cordova_battery_status.htm
 
 ### Camera page ###
 
-Results of tutorial about camera plugin. At this page you can use camera for taking picture or load image from local file system.
+Results of tutorial about camera plugin usage. At this page you can use camera for taking picture or load image from local file system.
+
+Plugin install command: ```cordova plugin add cordova-plugin-camera```
 
 ![Camera page](https://github.com/saveryanov/cordova-playground/blob/master/screenshots/camera-tab.png?raw=true)
 
@@ -100,7 +104,9 @@ Read more at: https://www.tutorialspoint.com/cordova/cordova_camera.htm
 
 ### Contacts page ###
 
-Results of tutorial about contacts plugin. At this page you can create, find and delete contacts.
+At this page you can create, find and delete contacts by contacts plugin.
+
+Plugin install command: ```cordova plugin add cordova-plugin-contacts```
 
 ![Contacts page](https://github.com/saveryanov/cordova-playground/blob/master/screenshots/contacts-tab.png?raw=true)
 
@@ -108,8 +114,20 @@ Read more at: https://www.tutorialspoint.com/cordova/cordova_contacts.htm
 
 ### Device page ###
 
-Results of tutorial about device plugin. At this page you can get info about your device.
+At this page you can get info about your device.
+
+Plugin install command: ```cordova plugin add cordova-plugin-device```
 
 ![Contacts page](https://github.com/saveryanov/cordova-playground/blob/master/screenshots/device-tab.png?raw=true)
 
 Read more at: https://www.tutorialspoint.com/cordova/cordova_device.htm
+
+### Accelerometer page ###
+
+At this page you can get info from accelerometer (x, y, z).
+
+Plugin install command: ```cordova plugin add cordova-plugin-device-motion```
+
+![Contacts page](https://github.com/saveryanov/cordova-playground/blob/master/screenshots/accelerometer-tab.png?raw=true)
+
+Read more at: https://www.tutorialspoint.com/cordova/cordova_accelometer.htm
