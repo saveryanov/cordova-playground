@@ -134,7 +134,7 @@ Read more at: https://www.tutorialspoint.com/cordova/cordova_accelometer.htm
 
 ### Device Orientation page ###
 
-At this page you can get info about device orientation. The compass plugin is almost the same as the acceleration plugin
+At this page you can get info about device orientation. The compass plugin is almost the same as the acceleration plugin.
 
 Plugin install command: ```cordova plugin add cordova-plugin-device-orientation```
 

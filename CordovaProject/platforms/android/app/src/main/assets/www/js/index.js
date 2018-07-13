@@ -201,40 +201,42 @@
                 navigator.accelerometer.clearWatch(accelerationWatchID);
             });
 
-
+            
             // Device orientation
+            function updateOrientation(heading) {
+                $('#device-orientation-output').html('<pre>' + JSON.stringify(heading, null, 4) + '</pre>');
+            }
             document.getElementById("getOrientation").addEventListener("click", function getOrientation() {
                 navigator.compass.getCurrentHeading(compassSuccess, compassError);
-             
+
                 function compassSuccess(heading) {
-                    $('#device-orientation-output').html('<pre>' + JSON.stringify(heading, null, 4) + '</pre>');
+                    updateOrientation(heading);
                 }
-             
+
                 function compassError(error) {
-                   alert('CompassError: ' + error.code);
+                    alert('CompassError: ' + error.code);
                 }
             });
             var orientationWatchID;
-            document.getElementById("watchOrientation").addEventListener("click", function watchOrientation(){
+            document.getElementById("watchOrientation").addEventListener("click", function watchOrientation() {
                 var compassOptions = {
-                   frequency: 50
+                    frequency: 50
                 }
                 orientationWatchID = navigator.compass.watchHeading(compassSuccess, compassError, compassOptions);
-             
+
                 function compassSuccess(heading) {
-                   $('#device-orientation-output').html('<pre>' + JSON.stringify(heading, null, 4) + '</pre>');
+                    updateOrientation(heading);
                 }
-             
+
                 function compassError(error) {
-                   alert('CompassError: ' + error.code);
+                    alert('CompassError: ' + error.code);
                 }
             });
             $("#stopWatchOrientation").click(function stopWatchAcceleration() {
                 navigator.compass.clearWatch(orientationWatchID);
             });
-            
-             
-             
+
+
         },
 
     };
