@@ -30,6 +30,9 @@
     },
     "cordova-plugin-device-orientation": {
       "PACKAGE_NAME": "io.cordova.cordovaplayground"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "io.cordova.cordovaplayground"
     }
   },
   "dependent_plugins": {}

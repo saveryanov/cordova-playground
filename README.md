@@ -112,13 +112,13 @@ Plugin install command: ```cordova plugin add cordova-plugin-contacts```
 
 Read more at: https://www.tutorialspoint.com/cordova/cordova_contacts.htm
 
-### Device page ###
+### Device info page ###
 
 At this page you can get info about your device.
 
 Plugin install command: ```cordova plugin add cordova-plugin-device```
 
-![Contacts page](https://github.com/saveryanov/cordova-playground/blob/master/screenshots/device-tab.png?raw=true)
+![Device info page](https://github.com/saveryanov/cordova-playground/blob/master/screenshots/device-tab.png?raw=true)
 
 Read more at: https://www.tutorialspoint.com/cordova/cordova_device.htm
 
@@ -128,7 +128,7 @@ At this page you can get info from accelerometer (x, y, z).
 
 Plugin install command: ```cordova plugin add cordova-plugin-device-motion```
 
-![Contacts page](https://github.com/saveryanov/cordova-playground/blob/master/screenshots/accelerometer-tab.png?raw=true)
+![Accelerometer page](https://github.com/saveryanov/cordova-playground/blob/master/screenshots/accelerometer-tab.png?raw=true)
 
 Read more at: https://www.tutorialspoint.com/cordova/cordova_accelometer.htm
 
@@ -140,6 +140,17 @@ Plugin install command: ```cordova plugin add cordova-plugin-device-orientation`
 
 Some devices do not have the magnetic sensor that is needed for the compass to work. If your device doesn't have it, the following error will be displayed.
 
-![Contacts page](https://github.com/saveryanov/cordova-playground/blob/master/screenshots/device-orientation-tab.png?raw=true)
+![Orientation page](https://github.com/saveryanov/cordova-playground/blob/master/screenshots/device-orientation-tab.png?raw=true)
 
 Read more at: https://www.tutorialspoint.com/cordova/cordova_device_orientation.htm
+
+### Dialogs ###
+
+Results of tutorial about native dialogs usage.
+
+Plugin install command: ```cordova plugin add cordova-plugin-dialogs```
+
+![Dialogs page](https://github.com/saveryanov/cordova-playground/blob/master/screenshots/dialogs-tab.png?raw=true)
+![Promt dialog](https://github.com/saveryanov/cordova-playground/blob/master/screenshots/dialogs-promt-tab.png?raw=true)
+
+Read more at: https://www.tutorialspoint.com/cordova/cordova_dialogs.htm

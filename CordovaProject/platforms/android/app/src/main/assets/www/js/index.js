@@ -201,12 +201,12 @@
                 navigator.accelerometer.clearWatch(accelerationWatchID);
             });
 
-            
+
             // Device orientation
             function updateOrientation(heading) {
                 $('#device-orientation-output').html('<pre>' + JSON.stringify(heading, null, 4) + '</pre>');
             }
-            document.getElementById("getOrientation").addEventListener("click", function getOrientation() {
+            $("#getOrientation").click(function getOrientation() {
                 navigator.compass.getCurrentHeading(compassSuccess, compassError);
 
                 function compassSuccess(heading) {
@@ -218,7 +218,7 @@
                 }
             });
             var orientationWatchID;
-            document.getElementById("watchOrientation").addEventListener("click", function watchOrientation() {
+            $("#watchOrientation").click(function watchOrientation() {
                 var compassOptions = {
                     frequency: 50
                 }
@@ -234,6 +234,49 @@
             });
             $("#stopWatchOrientation").click(function stopWatchAcceleration() {
                 navigator.compass.clearWatch(orientationWatchID);
+            });
+
+
+            // Dialogs
+            function printDialogOutput(str) {
+                $('#dialog-output').html(str);
+            }
+            $("#dialogAlert").click(function dialogAlert() {
+                var message = "I am Alert Dialog!";
+                var title = "ALERT";
+                var buttonName = "Alert Button";
+                navigator.notification.alert(message, alertCallback, title, buttonName);
+
+                function alertCallback() {
+                    printDialogOutput("Alert is Dismissed!");
+                }
+            });
+            $("#dialogConfirm").click(function dialogConfirm() {
+                var message = "Am I Confirm Dialog?";
+                var title = "CONFIRM";
+                var buttonLabels = "YES,NO";
+                navigator.notification.confirm(message, confirmCallback, title, buttonLabels);
+
+                function confirmCallback(buttonIndex) {
+                    printDialogOutput("You clicked " + buttonIndex + " button!");
+                }
+
+            });
+            $("#dialogPrompt").click(function dialogPrompt() {
+                var message = "Am I Prompt Dialog?";
+                var title = "PROMPT";
+                var buttonLabels = ["YES", "NO"];
+                var defaultText = "Default"
+                navigator.notification.prompt(message, promptCallback, title, buttonLabels, defaultText);
+
+                function promptCallback(result) {
+                    printDialogOutput("You clicked " + result.buttonIndex + " button! \n" + "You entered " + result.input1);
+                }
+
+            });
+            $("#dialogBeep").click(function dialogBeep() {
+                var times = 2;
+                navigator.notification.beep(times);
             });
 
 
