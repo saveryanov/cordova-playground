@@ -2,9 +2,9 @@
 
 Repository for experiments and learning cordova by tutorials at https://www.tutorialspoint.com/cordova. I will go through these tutorials when creating an application for android.
 
-My cordova project is located in the CordovaProject directory. You can download it by command: 
+My cordova project is located in the CordovaProject directory. You can download it by command:
 
-```git clone https://github.com/saveryanov/cordova-playground```.
+```git clone https://github.com/saveryanov/cordova-playground```
 
 It was built as single page app with simple navigation on tutorials where:
   
@@ -32,7 +32,7 @@ Read more at: https://www.tutorialspoint.com/cordova/cordova_environment_setup.h
 
 ## New project ##
 
-Init new cordova project: 
+Init new cordova project:
 
 ```cordova create CordovaProject io.cordova.hellocordova CordovaApp```
 
