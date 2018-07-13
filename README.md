@@ -61,3 +61,39 @@ To install plugins via Cordova CLI: ```cordova plugin add cordova-plugin-battery
 To uninstall plugins via Cordova CLI: ```cordova plugin remove cordova-plugin-battery-status``` (battery plugin)
 
 Read more at: https://www.tutorialspoint.com/cordova/cordova_plugman.htm
+
+## Results ##
+
+If you run this app you can see tabs at the top. They are used for navigation between pages with some tutorial results.
+
+### Events ###
+
+Pressing the volume control buttons is handled using events and causing alert message.
+
+![Volume button press handle](https://github.com/saveryanov/cordova-playground/blob/master/screenshots/volume-button-press-handle.png?raw=true)
+
+Read more at:  https://www.tutorialspoint.com/cordova/cordova_events.htm
+
+### Local storage page ###
+
+Here the results of experiments with local storage values. I made simple form with two input fields for setting/removing values in local storage.
+
+![Local storage tab](https://github.com/saveryanov/cordova-playground/blob/master/screenshots/local-storage-tab.png?raw=true)
+
+Read more at: https://www.tutorialspoint.com/cordova/cordova_storage.htm
+
+### Battery page ###
+
+Here the results of tutorial about battery status plugin. At this page you can see information about battery level and charging status.
+
+![Battery tab](https://github.com/saveryanov/cordova-playground/blob/master/screenshots/battery-tab.png?raw=true)
+
+Read more at: https://www.tutorialspoint.com/cordova/cordova_battery_status.htm
+
+### Camera page ###
+
+Here the results of tutorial about camera plugin. At this page you can use camera for taking picture or load image from local file system.
+
+![Camera page](https://github.com/saveryanov/cordova-playground/blob/master/screenshots/camera-tab.png?raw=true)
+
+Read more at: https://www.tutorialspoint.com/cordova/cordova_camera.htm
