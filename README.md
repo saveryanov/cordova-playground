@@ -2,7 +2,9 @@
 
 Repository for experiments and learning cordova by tutorials at https://www.tutorialspoint.com/cordova. I will go through these tutorials when creating an application for android.
 
-My cordova project is located in the CordovaProject directory. You can download it by command: ```git clone https://github.com/saveryanov/cordova-playground```.
+My cordova project is located in the CordovaProject directory. You can download it by command: 
+
+```git clone https://github.com/saveryanov/cordova-playground```.
 
 It was built as single page app with simple navigation on tutorials where:
   
@@ -30,21 +32,33 @@ Read more at: https://www.tutorialspoint.com/cordova/cordova_environment_setup.h
 
 ## New project ##
 
-Init new cordova project: ```cordova create CordovaProject io.cordova.hellocordova CordovaApp```
+Init new cordova project: 
+
+```cordova create CordovaProject io.cordova.hellocordova CordovaApp```
 
 * **CordovaProject** is the directory name where the app is created.
 * **io.cordova.hellocordova** is the default reverse domain value. You should use your own domain value if possible.
 * **CordovaApp** is the title of your app.
 
-And go to this directory: ```cd CordovaProject```
+And go to this directory:
 
-Then add android platform: ```cordova platform add android```
+```cd CordovaProject```
 
-And build your app: ```cordova build android```
+Then add android platform:
 
-Run your app with emulator: ```cordova emulate android```
+```cordova platform add android```
 
-You can check cordova requirements for platforms specified: ```cordova requirements android```
+And build your app:
+
+```cordova build android```
+
+Run your app with emulator:
+
+```cordova emulate android```
+
+You can check cordova requirements for platforms specified:
+
+```cordova requirements android```
 
 Read more at: https://www.tutorialspoint.com/cordova/cordova_first_application.htm
 
@@ -58,7 +72,9 @@ Read more at: https://www.tutorialspoint.com/cordova/cordova_config_xml.htm
 
 If you using emulator you can output some data to console by simple console.log() method. For seing your logged messages from app just open Google Chrome and go to: ```chrome://inspect```.
 
-Also you can use **logcat** output from the terminal: ```adb logcat | grep -i "console"```
+Also you can use **logcat** output from the terminal:
+
+```adb logcat | grep -i "console"```
 
 There you can find your emulated device, then click **inpect**. You can find app output at the **console** tab.
 
@@ -66,15 +82,25 @@ There you can find your emulated device, then click **inpect**. You can find app
 
 Cordova Plugman is a useful command line tool for installing and managing plugins. You should use **plugman** if your app needs to run on one specific platform. If you want to create a cross-platform app you should use **cordova-cli** which will modify plugins for different platforms.
 
-To install plugman just run this command: ```npm install -g plugman```
+To install plugman just run this command:
 
-To install plugins via plugman: ```plugman install --platform android --project platforms\android --plugin cordova-plugin-camera```
+```npm install -g plugman```
 
-To uninstall plugins via plugman: ```plugman uninstall --platform android --project platforms\android  --plugin cordova-plugin-camera```
+To install plugins via plugman:
 
-To install plugins via Cordova CLI: ```cordova plugin add cordova-plugin-battery-status``` (battery plugin)
+```plugman install --platform android --project platforms\android --plugin cordova-plugin-camera```
 
-To uninstall plugins via Cordova CLI: ```cordova plugin remove cordova-plugin-battery-status``` (battery plugin)
+To uninstall plugins via plugman:
+
+```plugman uninstall --platform android --project platforms\android  --plugin cordova-plugin-camera```
+
+To install plugins via Cordova CLI:
+
+```cordova plugin add cordova-plugin-battery-status``` (battery plugin)
+
+To uninstall plugins via Cordova CLI:
+
+```cordova plugin remove cordova-plugin-battery-status``` (battery plugin)
 
 Read more at: https://www.tutorialspoint.com/cordova/cordova_plugman.htm
 
