@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Jul 13 12:44:16 MSK 2018
+#Fri Jul 13 15:34:55 MSK 2018
 5.base=/Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/build/intermediates/res/debug/resources-debug.ap_
 42.base=/Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/build/intermediates/res/debug/resources-debug.ap_
 32.set=ANDROID_RESOURCE

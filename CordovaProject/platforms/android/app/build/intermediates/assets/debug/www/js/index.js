@@ -111,7 +111,7 @@
 
             $("#createContact").click(function createContact() {
                 var myContact = navigator.contacts.create({
-                    "displayName": "Test User"
+                    "displayName": $("#contactsDisplayName").val()
                 });
                 myContact.save(contactSuccess, contactError);
 
@@ -126,15 +126,13 @@
             });
             $("#findContact").click(function findContacts() {
                 var options = new ContactFindOptions();
-                options.filter = "";
+                options.filter = $("#contactsDisplayName").val();
                 options.multiple = true;
                 var fields = ["displayName"];
                 navigator.contacts.find(fields, contactfindSuccess, contactfindError, options);
 
                 function contactfindSuccess(contacts) {
-                    for (var i = 0; i < contacts.length; i++) {
-                        alert("Display Name = " + contacts[i].displayName);
-                    }
+                    $('#contacts-output').html('<pre>' + JSON.stringify(contacts, null, 4) + '</pre>');
                 }
 
                 function contactfindError(message) {
@@ -144,7 +142,7 @@
             });
             $("#deleteContact").click(function deleteContact() {
                 var options = new ContactFindOptions();
-                options.filter = "Test User";
+                options.filter = $("#contactsDisplayName").val();
                 options.multiple = false;
                 var fields = ["displayName"];
                 navigator.contacts.find(fields, contactfindSuccess, contactfindError, options);
