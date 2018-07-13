@@ -105,3 +105,11 @@ Results of tutorial about contacts plugin. At this page you can create, find and
 ![Contacts page](https://github.com/saveryanov/cordova-playground/blob/master/screenshots/contacts-tab.png?raw=true)
 
 Read more at: https://www.tutorialspoint.com/cordova/cordova_contacts.htm
+
+### Device page ###
+
+Results of tutorial about device plugin. At this page you can get info about your device.
+
+![Contacts page](https://github.com/saveryanov/cordova-playground/blob/master/screenshots/device-tab.png?raw=true)
+
+Read more at: https://www.tutorialspoint.com/cordova/cordova_device.htm

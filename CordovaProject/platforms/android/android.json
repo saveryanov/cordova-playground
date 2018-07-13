@@ -23,6 +23,10 @@
             {
               "xml": "<feature name=\"Contacts\"><param name=\"android-package\" value=\"org.apache.cordova.contacts.ContactManager\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -71,6 +75,9 @@
       "PACKAGE_NAME": "io.cordova.cordovaplayground"
     },
     "cordova-plugin-contacts": {
+      "PACKAGE_NAME": "io.cordova.cordovaplayground"
+    },
+    "cordova-plugin-device": {
       "PACKAGE_NAME": "io.cordova.cordovaplayground"
     }
   },
@@ -192,6 +199,14 @@
       "merges": [
         ""
       ]
+    },
+    {
+      "id": "cordova-plugin-device.device",
+      "file": "plugins/cordova-plugin-device/www/device.js",
+      "pluginId": "cordova-plugin-device",
+      "clobbers": [
+        "device"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -199,6 +214,7 @@
     "cordova-plugin-battery-status": "2.0.2",
     "cordova-plugin-console": "1.1.0",
     "cordova-plugin-camera": "4.0.3",
-    "cordova-plugin-contacts": "3.0.1"
+    "cordova-plugin-contacts": "3.0.1",
+    "cordova-plugin-device": "2.0.2"
   }
 }

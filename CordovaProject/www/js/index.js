@@ -163,8 +163,12 @@
                 function contactfindError(message) {
                     alert('Failed because: ' + message);
                 }
-
             });
+
+
+            // Device info
+            $('#device-output').html('<pre>' + JSON.stringify(device, null, 4) + '</pre>');
+
 
         },
 
