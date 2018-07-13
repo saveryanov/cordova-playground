@@ -140,6 +140,30 @@ module.exports = [
     "clobbers": [
       "navigator.accelerometer"
     ]
+  },
+  {
+    "id": "cordova-plugin-device-orientation.CompassError",
+    "file": "plugins/cordova-plugin-device-orientation/www/CompassError.js",
+    "pluginId": "cordova-plugin-device-orientation",
+    "clobbers": [
+      "CompassError"
+    ]
+  },
+  {
+    "id": "cordova-plugin-device-orientation.CompassHeading",
+    "file": "plugins/cordova-plugin-device-orientation/www/CompassHeading.js",
+    "pluginId": "cordova-plugin-device-orientation",
+    "clobbers": [
+      "CompassHeading"
+    ]
+  },
+  {
+    "id": "cordova-plugin-device-orientation.compass",
+    "file": "plugins/cordova-plugin-device-orientation/www/compass.js",
+    "pluginId": "cordova-plugin-device-orientation",
+    "clobbers": [
+      "navigator.compass"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -151,7 +175,8 @@ module.exports.metadata =
   "cordova-plugin-camera": "4.0.3",
   "cordova-plugin-contacts": "3.0.1",
   "cordova-plugin-device": "2.0.2",
-  "cordova-plugin-device-motion": "2.0.1"
+  "cordova-plugin-device-motion": "2.0.1",
+  "cordova-plugin-device-orientation": "2.0.1"
 };
 // BOTTOM OF METADATA
 });

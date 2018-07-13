@@ -47,6 +47,7 @@
                 <span class="tab tab-contacts" data-container-name="tab-container-contacts">Contacts</span>
                 <span class="tab tab-device" data-container-name="tab-container-device">Device</span>
                 <span class="tab tab-accelerometer" data-container-name="tab-container-accelerometer">Accelerometer</span>
+                <span class="tab tab-device-orientation" data-container-name="tab-container-device-orientation">Device orientation</span>
             </div>
 
             <!-- Local storage -->
@@ -110,9 +111,20 @@
             <div class="tab-container tab-container-accelerometer">
                 <h2>Accelerometer</h2>
                 <button id="getAcceleration">Get acceleration</button>
-                <button id="watchAcceleration">Update each sec</button>
-                <button id="watchAcceleration">Stop watching</button>
+                <button id="watchAcceleration">Watch</button>
+                <button id="stopAcceleration">Stop watching</button>
                 <div id="accelerometer-output"></div>
+            </div>
+
+
+
+            <!-- Device orientation -->
+            <div class="tab-container tab-container-device-orientation">
+                <h2>Device orientation</h2>
+                <button id="getOrientation">Get orientation</button>
+                <button id="watchOrientation">Watch orientation</button>
+                <button id="stopOrientation">Stop watching</button>
+                <div id="device-orientation-output"></div>
             </div>
 
 

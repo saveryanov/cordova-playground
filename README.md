@@ -131,3 +131,15 @@ Plugin install command: ```cordova plugin add cordova-plugin-device-motion```
 ![Contacts page](https://github.com/saveryanov/cordova-playground/blob/master/screenshots/accelerometer-tab.png?raw=true)
 
 Read more at: https://www.tutorialspoint.com/cordova/cordova_accelometer.htm
+
+### Device Orientation page ###
+
+At this page you can get info about device orientation. The compass plugin is almost the same as the acceleration plugin
+
+Plugin install command: ```cordova plugin add cordova-plugin-device-orientation```
+
+Some devices do not have the magnetic sensor that is needed for the compass to work. If your device doesn't have it, the following error will be displayed.
+
+![Contacts page](https://github.com/saveryanov/cordova-playground/blob/master/screenshots/device-orientation-tab.png?raw=true)
+
+Read more at: https://www.tutorialspoint.com/cordova/cordova_device_orientation.htm

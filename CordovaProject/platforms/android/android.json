@@ -31,6 +31,10 @@
             {
               "xml": "<feature name=\"Accelerometer\"><param name=\"android-package\" value=\"org.apache.cordova.devicemotion.AccelListener\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"Compass\"><param name=\"android-package\" value=\"org.apache.cordova.deviceorientation.CompassListener\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -52,6 +56,14 @@
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />",
               "count": 1
             }
           ],
@@ -85,6 +97,9 @@
       "PACKAGE_NAME": "io.cordova.cordovaplayground"
     },
     "cordova-plugin-device-motion": {
+      "PACKAGE_NAME": "io.cordova.cordovaplayground"
+    },
+    "cordova-plugin-device-orientation": {
       "PACKAGE_NAME": "io.cordova.cordovaplayground"
     }
   },
@@ -230,6 +245,30 @@
       "clobbers": [
         "navigator.accelerometer"
       ]
+    },
+    {
+      "id": "cordova-plugin-device-orientation.CompassError",
+      "file": "plugins/cordova-plugin-device-orientation/www/CompassError.js",
+      "pluginId": "cordova-plugin-device-orientation",
+      "clobbers": [
+        "CompassError"
+      ]
+    },
+    {
+      "id": "cordova-plugin-device-orientation.CompassHeading",
+      "file": "plugins/cordova-plugin-device-orientation/www/CompassHeading.js",
+      "pluginId": "cordova-plugin-device-orientation",
+      "clobbers": [
+        "CompassHeading"
+      ]
+    },
+    {
+      "id": "cordova-plugin-device-orientation.compass",
+      "file": "plugins/cordova-plugin-device-orientation/www/compass.js",
+      "pluginId": "cordova-plugin-device-orientation",
+      "clobbers": [
+        "navigator.compass"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -239,6 +278,7 @@
     "cordova-plugin-camera": "4.0.3",
     "cordova-plugin-contacts": "3.0.1",
     "cordova-plugin-device": "2.0.2",
-    "cordova-plugin-device-motion": "2.0.1"
+    "cordova-plugin-device-motion": "2.0.1",
+    "cordova-plugin-device-orientation": "2.0.1"
   }
 }

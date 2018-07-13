@@ -27,6 +27,9 @@
     },
     "cordova-plugin-device-motion": {
       "PACKAGE_NAME": "io.cordova.cordovaplayground"
+    },
+    "cordova-plugin-device-orientation": {
+      "PACKAGE_NAME": "io.cordova.cordovaplayground"
     }
   },
   "dependent_plugins": {}

@@ -182,12 +182,12 @@
                     alert('onError!');
                 }
             });
-            var watchID;
+            var accelerationWatchID;
             $("#watchAcceleration").click(function watchAcceleration() {
                 var accelerometerOptions = {
-                    frequency: 1000
+                    frequency: 50
                 }
-                watchID = navigator.accelerometer.watchAcceleration(accelerometerSuccess, accelerometerError, accelerometerOptions);
+                accelerationWatchID = navigator.accelerometer.watchAcceleration(accelerometerSuccess, accelerometerError, accelerometerOptions);
 
                 function accelerometerSuccess(acceleration) {
                     $('#accelerometer-output').html('<pre>' + JSON.stringify(acceleration, null, 4) + '</pre>');
@@ -198,9 +198,43 @@
                 }
             });
             $("#stopWatchAcceleration").click(function stopWatchAcceleration() {
-                navigator.accelerometer.clearWatch(watchID);
+                navigator.accelerometer.clearWatch(accelerationWatchID);
             });
 
+
+            // Device orientation
+            document.getElementById("getOrientation").addEventListener("click", function getOrientation() {
+                navigator.compass.getCurrentHeading(compassSuccess, compassError);
+             
+                function compassSuccess(heading) {
+                    $('#device-orientation-output').html('<pre>' + JSON.stringify(heading, null, 4) + '</pre>');
+                }
+             
+                function compassError(error) {
+                   alert('CompassError: ' + error.code);
+                }
+            });
+            var orientationWatchID;
+            document.getElementById("watchOrientation").addEventListener("click", function watchOrientation(){
+                var compassOptions = {
+                   frequency: 50
+                }
+                orientationWatchID = navigator.compass.watchHeading(compassSuccess, compassError, compassOptions);
+             
+                function compassSuccess(heading) {
+                   $('#device-orientation-output').html('<pre>' + JSON.stringify(heading, null, 4) + '</pre>');
+                }
+             
+                function compassError(error) {
+                   alert('CompassError: ' + error.code);
+                }
+            });
+            $("#stopWatchOrientation").click(function stopWatchAcceleration() {
+                navigator.compass.clearWatch(orientationWatchID);
+            });
+            
+             
+             
         },
 
     };
