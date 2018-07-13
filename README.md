@@ -26,6 +26,8 @@ Then add android platform: ```cordova platform add android```
 
 And build your app: ```cordova build android```
 
+Run your app with emulator: ```cordova emulate android```
+
 You can check cordova requirements for platforms specified: ```cordova requirements android```
 
 Read more at: https://www.tutorialspoint.com/cordova/cordova_first_application.htm

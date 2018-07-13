@@ -68,6 +68,10 @@
         "source": "/Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/res/mipmap-xxxhdpi/icon.png"
     },
     {
+        "merged": "/Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/build/intermediates/res/merged/debug/xml_camera_provider_paths.xml.flat",
+        "source": "/Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/res/xml/camera_provider_paths.xml"
+    },
+    {
         "merged": "/Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/build/intermediates/res/merged/debug/mipmap-ldpi_icon.png.flat",
         "source": "/Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/res/mipmap-ldpi/icon.png"
     },

@@ -38,21 +38,53 @@
     <body>
         <div class="app">
             <h1>Cordova Playground</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+
+            <!-- Tabs nav -->
+            <div class="tabs container">
+                <span class="tab tab-local-storage" data-container-name="tab-container-local-storage">Local storage</span>
+                <span class="tab tab-battery" data-container-name="tab-container-battery">Battery</span>
+                <span class="tab tab-camera" data-container-name="tab-container-camera">Camera</span>
             </div>
 
-            <button id = "setLocalStorage">SET LOCAL STORAGE</button>
-            <button id = "showLocalStorage">SHOW LOCAL STORAGE</button>
-            <button id = "removeProjectFromLocalStorage">REMOVE PROJECT</button>
-            <button id = "getLocalStorageByKey">GET BY KEY</button>
+            <!-- Local storage -->
+            <div class="tab-container tab-container-local-storage">
+                <h2>Local storage</h2>
 
-            <input id = "localStorageValue"/>
-            <input id = "localStorageKey"/>
-            <button id = "setLocalStorageByInput">Set my input</button>
+                <button id="setLocalStorage">Set local storage values</button>
+
+                <div>
+                    <label for="localStorageKey">Key:</label>
+                    <input id="localStorageKey"/>
+                </div>
+                <div>
+                    <label for="localStorageValue">Value:</label>
+                    <input id="localStorageValue"/>
+                </div>
+                <div>
+                    <button id="setLocalStorageByInput">Set value</button>
+                    <button id="removeLocalStorageByInput">Remove value</button>
+                </div>
+
+                <div id="local-storage-output"></div>
+            </div>
+
+            <!-- Battery -->
+            <div class="tab-container tab-container-battery">
+                <h2>Battery</h2>
+                <div id="battery-output"></div>
+            </div>
+
+            <!-- Camera -->
+            <div class="tab-container tab-container-camera">
+                <h2>Camera</h2>
+                <button id="cameraTakePicture">Take pic by camera</button>
+                <button id="cameraGetPicture">Get pic from local file system</button>
+                <img id="cameraResultImage"></img>
+            </div>
+
         </div>
         <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>
