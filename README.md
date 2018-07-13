@@ -2,6 +2,22 @@
 
 Repository for experiments and learning cordova by tutorials at https://www.tutorialspoint.com/cordova. I will go through these tutorials when creating an application for android.
 
+My cordova project is located in the CordovaProject directory. You can download it by command: ```git clone https://github.com/saveryanov/cordova-playground```.
+
+It was built as single page app with simple navigation on tutorials where:
+  
+* **/CordovaProject/www/index.html** - index html page
+* **/CordovaProject/www/js/index.js** - all main code for tutorials
+* **/CordovaProject/www/css/index.css** - css for this page
+
+I didn't bother at the expense of the correct architecture of building single-page applications and tried to use the most simple approach for studying Cordova. I just use jQuery, because it's very simple :)
+
+There are some scripts in the **/CordovaProject/package.json** for comfortable usage:
+
+* **npm run output** - print all your console.log() messages in terminal by logcat
+* **npm run build** - build android app (apk will created at /CordovaProject/platforms/android/app/build/outputs/apk/debug/app-debug.apk)
+* **npm run emulate** - run android emulator and load your app
+
 ## Install ##
 
 1. Install all dependencies to this project: ```npm install```
