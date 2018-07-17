@@ -203,7 +203,7 @@ Results of tutorial about writing/reading/editing/deleting files.
 
 Plugin install command: ```cordova plugin add cordova-plugin-file```
 
-![Dialogs page](https://github.com/saveryanov/cordova-playground/blob/master/screenshots/filesystem-tab.png?raw=true)
+![Filesystem page](https://github.com/saveryanov/cordova-playground/blob/master/screenshots/filesystem-tab.png?raw=true)
 
 Read more at: https://www.tutorialspoint.com/cordova/cordova_file_system.htm
 
@@ -214,7 +214,7 @@ Results of tutorial about uploading and downloading files.
 
 Plugin install command: ```cordova plugin add cordova-plugin-file-transfer```
 
-![Dialogs page](https://github.com/saveryanov/cordova-playground/blob/master/screenshots/filetransfer-tab.png?raw=true)
+![Filetransfer page](https://github.com/saveryanov/cordova-playground/blob/master/screenshots/filetransfer-tab.png?raw=true)
 
 Read more at: https://www.tutorialspoint.com/cordova/cordova_file_transfer.htm
 
@@ -225,7 +225,7 @@ Results of tutorial about geolocation.
 
 Plugin install command: ```cordova plugin add cordova-plugin-geolocation```
 
-![Dialogs page](https://github.com/saveryanov/cordova-playground/blob/master/screenshots/geolocation-tab.png?raw=true)
+![Geolocation page](https://github.com/saveryanov/cordova-playground/blob/master/screenshots/geolocation-tab.png?raw=true)
 
 Read more at: https://www.tutorialspoint.com/cordova/cordova_geolocation.htm
 
