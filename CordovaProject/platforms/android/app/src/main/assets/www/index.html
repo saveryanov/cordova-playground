@@ -51,6 +51,7 @@
                 <span class="tab tab-filesystem" data-container-name="tab-container-filesystem">File system</span>
                 <span class="tab tab-filetransfer" data-container-name="tab-container-filetransfer">File transfer</span>
                 <span class="tab tab-geolocation" data-container-name="tab-container-geolocation">Geolocation</span>
+                <span class="tab tab-inappbrowser" data-container-name="tab-container-inappbrowser">inAppBrowser</span>
             </div>
         </div>
         <div class="content">
@@ -171,6 +172,27 @@
                 <button id="watchPosition">Watch position</button>
                 <button id="stopWatchPosition">Stop watching</button>
                 <div id="position-output"></div>
+            </div>
+
+
+            <!-- Globalization -->
+            <div class="tab-container tab-container-globalization">
+                <h2>Globalization</h2>
+                <button id = "getLanguage">Language</button>
+                <button id = "getLocaleName">LOCALE NAME</button>
+                <button id = "getDate">DATE</button>
+                <button id = "getCurrency">CURRENCY</button>
+            </div>
+
+
+            <!-- InAppBrowser -->
+            <div class="tab-container tab-container-inappbrowser">
+                <h2>InAppBrowser</h2>
+                <div>
+                    <label for="inappbrowserUrl">URL:</label>
+                    <input id="inappbrowserUrl" value="http://example.com"/>
+                </div>
+                <button id="inappbrowserButton">Open</button>
             </div>
 
         </div>
