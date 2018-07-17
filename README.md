@@ -248,6 +248,7 @@ Results of tutorial about InAppBrowser.
 Plugin install command: ```cordova plugin add cordova-plugin-inappbrowser```
 
 ![InAppBrowser page](https://github.com/saveryanov/cordova-playground/blob/master/screenshots/inappbrowser-tab.png?raw=true)
+![InAppBrowser opened page](https://github.com/saveryanov/cordova-playground/blob/master/screenshots/inappbrowser-opened-tab.png?raw=true)
 
 Read more at: https://www.tutorialspoint.com/cordova/cordova_inappbrowser.htm
 
