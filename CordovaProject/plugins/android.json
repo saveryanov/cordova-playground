@@ -33,6 +33,15 @@
     },
     "cordova-plugin-dialogs": {
       "PACKAGE_NAME": "io.cordova.cordovaplayground"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "io.cordova.cordovaplayground"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "io.cordova.cordovaplayground"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "io.cordova.cordovaplayground"
     }
   },
   "dependent_plugins": {}

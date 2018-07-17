@@ -11,15 +11,15 @@ INJECTED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/and
 	android:name
 		ADDED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:12:127-180
 manifest
-ADDED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-23:12
-INJECTED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-23:12
-INJECTED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-23:12
-INJECTED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-23:12
+ADDED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-24:12
 MERGED from [com.android.support:support-v4:24.1.1] /Users/backend/.gradle/caches/transforms-1/files-1.1/support-v4-24.1.1.aar/5d36f7933dc54971a229a3f44b7671a3/AndroidManifest.xml:17:1-27:12
 MERGED from [:CordovaLib] /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/CordovaLib/build/intermediates/manifests/full/debug/AndroidManifest.xml:20:1-27:12
-INJECTED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-23:12
-INJECTED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-23:12
-INJECTED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-24:12
 	package
 		ADDED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:2:102-140
 		INJECTED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml
@@ -128,6 +128,10 @@ uses-permission#android.permission.ACCESS_FINE_LOCATION
 ADDED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:22:5-79
 	android:name
 		ADDED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:22:22-76
+uses-feature#android.hardware.location.gps
+ADDED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:23:5-66
+	android:name
+		ADDED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:23:19-63
 meta-data#android.support.FILE_PROVIDER_PATHS
 ADDED from /Users/backend/dev/cordova-playground/CordovaProject/platforms/android/app/src/main/AndroidManifest.xml:13:13-123
 	android:resource

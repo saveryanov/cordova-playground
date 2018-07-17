@@ -280,6 +280,196 @@
             });
 
 
+            // Filesystem
+            document.getElementById("createFile").addEventListener("click", function createFile() {
+                var type = window.TEMPORARY;
+                var size = 5*1024*1024;
+                window.requestFileSystem(type, size, successCallback, errorCallback)
+             
+                function successCallback(fs) {
+                   fs.root.getFile('log.txt', {create: true, exclusive: true}, function(fileEntry) {
+                      alert('File creation successfull!')
+                   }, errorCallback);
+                }
+             
+                function errorCallback(error) {
+                   alert("ERROR: " + error.code)
+                }
+                 
+            });
+            document.getElementById("writeFile").addEventListener("click", function writeFile() {
+                var type = window.TEMPORARY;
+                var size = 5*1024*1024;
+                window.requestFileSystem(type, size, successCallback, errorCallback)
+             
+                function successCallback(fs) {
+                   fs.root.getFile('log.txt', {create: true}, function(fileEntry) {
+             
+                      fileEntry.createWriter(function(fileWriter) {
+                         fileWriter.onwriteend = function(e) {
+                            alert('Write completed.');
+                         };
+             
+                         fileWriter.onerror = function(e) {
+                            alert('Write failed: ' + e.toString());
+                         };
+             
+                         var blob = new Blob(['Lorem Ipsum'], {type: 'text/plain'});
+                         fileWriter.write(blob);
+                      }, errorCallback);
+                   }, errorCallback);
+                }
+             
+                function errorCallback(error) {
+                   alert("ERROR: " + error.code)
+                }
+            });
+            document.getElementById("readFile").addEventListener("click", function readFile() {
+                var type = window.TEMPORARY;
+                var size = 5*1024*1024;
+                window.requestFileSystem(type, size, successCallback, errorCallback)
+             
+                function successCallback(fs) {
+                   fs.root.getFile('log.txt', {}, function(fileEntry) {
+             
+                      fileEntry.file(function(file) {
+                         var reader = new FileReader();
+             
+                         reader.onloadend = function(e) {
+                            var txtArea = document.getElementById('textarea');
+                            txtArea.value = this.result;
+                         };
+                         reader.readAsText(file);
+                      }, errorCallback);
+                   }, errorCallback);
+                }
+
+                function errorCallback(error) {
+                   alert("ERROR: " + error.code)
+                }
+            });
+            document.getElementById("removeFile").addEventListener("click", function removeFile() {
+                var type = window.TEMPORARY;
+                var size = 5*1024*1024;
+                window.requestFileSystem(type, size, successCallback, errorCallback)
+
+                function successCallback(fs) {
+                   fs.root.getFile('log.txt', {create: false}, function(fileEntry) {
+                      fileEntry.remove(function() {
+                         alert('File removed.');
+                      }, errorCallback);
+                   }, errorCallback);
+                }
+
+                function errorCallback(error) {
+                   alert("ERROR: " + error.code)
+                }
+            });
+
+
+            // Filetransfer
+            document.getElementById("uploadFile").addEventListener("click", function uploadFile() {
+                var fileURL = "///storage/emulated/0/DCIM/myFile"
+                var uri = encodeURI("http://posttestserver.com/post.php");
+                var options = new FileUploadOptions();
+                options.fileKey = "file";
+                options.fileName = fileURL.substr(fileURL.lastIndexOf('/')+1);
+                options.mimeType = "text/plain";
+
+                var headers = {'headerParam':'headerValue'};
+                options.headers = headers;
+                var ft = new FileTransfer();
+                ft.upload(fileURL, uri, onSuccess, onError, options);
+
+                function onSuccess(r) {
+                   console.log("Code = " + r.responseCode);
+                   console.log("Response = " + r.response);
+                   console.log("Sent = " + r.bytesSent);
+                }
+
+                function onError(error) {
+                   alert("An error has occurred: Code = " + error.code);
+                   console.log("upload error source " + error.source);
+                   console.log("upload error target " + error.target);
+                }
+
+            });
+            document.getElementById("downloadFile").addEventListener("click", function downloadFile() {
+                var fileTransfer = new FileTransfer();
+                var uri = encodeURI("https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg");
+                var fileURL =  "///storage/emulated/0/DCIM/myFile";
+
+                fileTransfer.download(
+                   uri, fileURL, function(entry) {
+                      console.log("download complete: " + entry.toURL());
+                   },
+
+                   function(error) {
+                      console.log("download error source " + error.source);
+                      console.log("download error target " + error.target);
+                      console.log("download error code" + error.code);
+                   },
+
+                   false, {
+                      headers: {
+                         "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+                      }
+                   }
+                );
+            });
+
+
+            // Geoposition
+            function printPositionOutput(position) {
+                $('#position-output').html(
+                    '<pre>' +
+                    'Latitude: '          + position.coords.latitude          + '\n' +
+                    'Longitude: '         + position.coords.longitude         + '\n' +
+                    'Altitude: '          + position.coords.altitude          + '\n' +
+                    'Accuracy: '          + position.coords.accuracy          + '\n' +
+                    'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+                    'Heading: '           + position.coords.heading           + '\n' +
+                    'Speed: '             + position.coords.speed             + '\n' +
+                    'Timestamp: '         + position.timestamp                + '\n' +
+                    '</pre>'
+                );
+            }
+            document.getElementById("getPosition").addEventListener("click", function getPosition() {
+                var options = {
+                   enableHighAccuracy: true,
+                   maximumAge: 3600000
+                }
+                navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
+
+                function onSuccess(position) {
+                    printPositionOutput(position);
+                }
+
+                function onError(error) {
+                   alert('code: '    + error.code    + '\n' + 'message: ' + error.message + '\n');
+                }
+            });
+            var geopositionWatchID;
+            document.getElementById("watchPosition").addEventListener("click", function watchPosition() {
+                var options = {
+                   maximumAge: 3600000,
+                   timeout: 5000,
+                   enableHighAccuracy: true,
+                }
+                geopositionWatchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
+
+                function onSuccess(position) {
+                    printPositionOutput(position);
+                }
+
+                function onError(error) {
+                   alert('code: '    + error.code    + '\n' +'message: ' + error.message + '\n');
+                }
+            });
+            $("#stopWatchPosition").click(function stopWatchPosition() {
+                navigator.compass.clearWatch(geopositionWatchID);
+            });
+
         },
 
     };

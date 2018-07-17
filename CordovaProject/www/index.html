@@ -36,9 +36,8 @@
         <title>Cordova Playground</title>
     </head>
     <body>
-        <div class="app">
+        <div class="header">
             <h1>Cordova Playground</h1>
-
             <!-- Tabs nav -->
             <div class="tabs container">
                 <span class="tab tab-local-storage" data-container-name="tab-container-local-storage">Local storage</span>
@@ -49,7 +48,12 @@
                 <span class="tab tab-accelerometer" data-container-name="tab-container-accelerometer">Accelerometer</span>
                 <span class="tab tab-device-orientation" data-container-name="tab-container-device-orientation">Device orientation</span>
                 <span class="tab tab-dialogs" data-container-name="tab-container-dialogs">Dialogs</span>
+                <span class="tab tab-filesystem" data-container-name="tab-container-filesystem">File system</span>
+                <span class="tab tab-filetransfer" data-container-name="tab-container-filetransfer">File transfer</span>
+                <span class="tab tab-geolocation" data-container-name="tab-container-geolocation">Geolocation</span>
             </div>
+        </div>
+        <div class="content">
 
             <!-- Local storage -->
             <div class="tab-container tab-container-local-storage">
@@ -94,9 +98,9 @@
                     <label for="contactsDisplayName">Value:</label>
                     <input id="contactsDisplayName"/>
                 </div>
-                <button id = "createContact">Add contact</button>
-                <button id = "findContact">Find contact</button>
-                <button id = "deleteContact">Delete contact</button>
+                <button id="createContact">Add contact</button>
+                <button id="findContact">Find contact</button>
+                <button id="deleteContact">Delete contact</button>
                 <div id="contacts-output"></div>
             </div>
 
@@ -133,11 +137,40 @@
             <div class="tab-container tab-container-dialogs">
                 <h2>Dialogs</h2>
                 <p>Here are different types of dialogs:</p>
-                <button id = "dialogAlert">ALERT</button>
-                <button id = "dialogConfirm">CONFIRM</button>
-                <button id = "dialogPrompt">PROMPT</button>
-                <button id = "dialogBeep">BEEP</button>
+                <button id="dialogAlert">ALERT</button>
+                <button id="dialogConfirm">CONFIRM</button>
+                <button id="dialogPrompt">PROMPT</button>
+                <button id="dialogBeep">BEEP</button>
                 <div id="dialog-output"></div>
+            </div>
+
+
+            <!-- Filesystem -->
+            <div class="tab-container tab-container-filesystem">
+                <h2>Filesystem</h2>
+                <button id="createFile">Create file</button>
+                <button id="writeFile">Write file</button>
+                <button id="readFile">Read file</button>
+                <button id="removeFile">Delete file</button>
+                <textarea id="textarea"></textarea>
+            </div>
+
+
+            <!-- Filetransfer -->
+            <div class="tab-container tab-container-filetransfer">
+                <h2>Filetransfer</h2>
+                <button id="uploadFile">Upload</button>
+                <button id="downloadFile">Download</button>
+            </div>
+
+
+            <!-- Geolocation -->
+            <div class="tab-container tab-container-geolocation">
+                <h2>Geolocation</h2>
+                <button id="getPosition">Current position</button>
+                <button id="watchPosition">Watch position</button>
+                <button id="stopWatchPosition">Stop watching</button>
+                <div id="position-output"></div>
             </div>
 
         </div>

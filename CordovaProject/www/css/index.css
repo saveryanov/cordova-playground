@@ -16,8 +16,12 @@ body {
 
 /* Portrait layout (default) */
 
-.app {
-    padding: 20px;
+.header {
+    margin: 20px 0;
+}
+
+.content {
+    margin: 10px 20px;
 }
 
 h1 {
