@@ -104,6 +104,62 @@ To uninstall plugins via Cordova CLI:
 
 Read more at: https://www.tutorialspoint.com/cordova/cordova_plugman.htm
 
+## Build release and sign apk ##
+
+To sign apk file you should create keystore file by executing this command in project root directory:
+
+```keytool -genkey -v -keystore YOUR-KEYSTORE-NAME.keystore -alias YOUR-ALIAS -keyalg RSA -keysize 2048```
+
+Replace YOUR-KEYSTORE-NAME.keystore and YOUR-ALIAS to your values. It will ask you for some questions (name, password, locality, etc).
+
+### Way 1: build.json ###
+
+Then create build.json file in project root directory and place this into it:
+
+```json
+{
+    "android": {
+      "release": {
+        "keystore": "YOUR-KEYSTORE-NAME.keystore",
+        "storePassword": "YOUR-KEYSTORE-PASSWORD",
+        "alias": "YOUR-ALIAS",
+        "password" : "YOUR-ALIAS-PASSWORD",
+        "keystoreType": ""
+      }
+    }
+  }
+```
+
+Don't forget to replace values like YOUR-KEYSTORE-NAME.keystore.
+
+Then run build release command:
+
+ ```cordova build android --release```
+
+Command ```cordova build android --release``` will create release-signing.properties in /platforms/android/ directory with sign parameters.
+
+### Way 2: release-signing.properties ###
+
+You can manually create release-signing.properties in /platforms/android/ directory with sign parameters.
+
+Put the following content into the file:
+
+```
+storeFile=YOUR-KEYSTORE-NAME.keystore
+storeType=jks
+keyAlias=YOUR-ALIAS
+keyPassword=YOUR-ALIAS-PASSWORD
+storePassword=YOUR-KEYSTORE-PASSWORD
+```
+
+Where storeFile is path to your keyfile (example: YOUR-KEYSTORE-NAME.keystore is placed in /platforms/android/ so you must move it into this dir).
+
+Then run build release command:
+
+ ```cordova build android --release```
+
+Read more at: https://haensel.pro/apache-cordova/cordova-create-a-signed-release-apk-easy-howto
+
 ## Results ##
 
 If you run this app you can see tabs at the top. They are used for navigation between pages with some tutorial results.
