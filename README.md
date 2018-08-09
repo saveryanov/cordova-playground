@@ -106,6 +106,8 @@ Read more at: https://www.tutorialspoint.com/cordova/cordova_plugman.htm
 
 ## Build release and sign apk ##
 
+To publish your app in play market you should build signed apk file for release.
+
 To sign apk file you should create keystore file by executing this command in project root directory:
 
 ```keytool -genkey -v -keystore YOUR-KEYSTORE-NAME.keystore -alias YOUR-ALIAS -keyalg RSA -keysize 2048```
@@ -159,6 +161,31 @@ Then run build release command:
  ```cordova build android --release```
 
 Read more at: https://haensel.pro/apache-cordova/cordova-create-a-signed-release-apk-easy-howto
+
+### P.S. Failed to generate v1 signature ###
+
+If you choose way with build.json then release-signing.proerties will be created automatically and contain something like this:
+
+```
+key.store=/PATH/TO/CORDOVA/PROJECT/YOUR-KEYSTORE-NAME.keystore
+key.alias=YOUR-ALIAS
+key.store.password=YOUR-KEYSTORE-PASSWORD
+key.alias.password=YOUR-ALIAS-PASSWORD
+```
+
+As you can see, it contains the differences from the file that is presented above. You can use this information for creating correct file. Just for me only worked the second variant but I used another version of cordova (8.0.0).
+
+The error that I got is:
+
+```
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ‚:app:packageRelease‘.
+> Failed to generate v1 signature
+```
+
+If you find this article by googling this error, hope I can help you :)
 
 ## Results ##
 
