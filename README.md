@@ -110,7 +110,7 @@ To publish your app in play market you should build signed apk file for release.
 
 To sign apk file you should create keystore file by executing this command in project root directory:
 
-```keytool -genkey -v -keystore YOUR-KEYSTORE-NAME.keystore -alias YOUR-ALIAS -keyalg RSA -keysize 2048```
+```keytool -genkey -v -keystore YOUR-KEYSTORE-NAME.keystore -alias YOUR-ALIAS -keyalg RSA -keysize 2048 -validity 20000```
 
 Replace YOUR-KEYSTORE-NAME.keystore and YOUR-ALIAS to your values. It will ask you for some questions (name, password, locality, etc).
 
